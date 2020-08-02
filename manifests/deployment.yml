@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "akscluster-a354"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "akscluster-a354"
+    spec:
+      containers:
+        - name: "akscluster-a354"
+          image: "mysmbtech.azurecr.io/akscluster"
+          ports:
+          - containerPort: 80
